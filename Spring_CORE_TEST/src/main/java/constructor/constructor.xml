@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">  
+
+
+
+<bean name="address" class="constructor.Address">
+<constructor-arg name="City"><value>Amravati</value></constructor-arg>
+<constructor-arg name="State"><value>Maharastra</value></constructor-arg>
+<constructor-arg name="Zipcode"><value>444105</value></constructor-arg>
+</bean>
+
+
+ <bean name="empp" class="constructor.Employee">
+<constructor-arg name="name"><value>Abhishek</value></constructor-arg>
+<constructor-arg name="salry" type="int"><value>100000</value></constructor-arg>
+<constructor-arg name="id" type="int"><value>395820</value></constructor-arg>
+ <constructor-arg name="address"><ref bean="address"/></constructor-arg> 
+</bean> 
+
+
+
+  
+</beans>  

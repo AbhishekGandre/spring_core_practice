@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
+
+
+<bean name="address" class="Autowire.Address">
+<constructor-arg name="City"><value>Amravati</value></constructor-arg>
+<constructor-arg name="State"><value>Maharastra</value></constructor-arg>
+<constructor-arg name="Zipcode"><value>444105</value></constructor-arg>
+</bean> 
+
+<bean name="address2" class="Autowire.Address">
+<constructor-arg name="City"><value>Amravatit</value></constructor-arg>
+<constructor-arg name="State"><value>Maharastra</value></constructor-arg>
+<constructor-arg name="Zipcode"><value>444105</value></constructor-arg>
+</bean>
+
+
+ <bean name="std" class="Autowire.Student" >
+<property name="name"><value>Abhishek</value></property>
+<property name="age"><value>25</value></property>
+<!-- <property name="address"><ref bean="address"/></property> -->
+
+</bean> 
+
+
+<!-- <bean name="auto" class="Autowire.Student" autowire="byName"/> -->
+
+
+  
+</beans>  
